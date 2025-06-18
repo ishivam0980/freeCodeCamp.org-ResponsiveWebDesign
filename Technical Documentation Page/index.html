@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Programming Documentation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav id="navbar">
+        <header>Python Programming Guide</header>
+        <ul>
+            <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+            <li><a class="nav-link" href="#Getting_Started">Getting Started</a></li>
+            <li><a class="nav-link" href="#Variables_and_Data_Types">Variables and Data Types</a></li>
+            <li><a class="nav-link" href="#Control_Structures">Control Structures</a></li>
+            <li><a class="nav-link" href="#Functions">Functions</a></li>
+            <li><a class="nav-link" href="#Object_Oriented_Programming">Object Oriented Programming</a></li>
+        </ul>
+    </nav>
+
+    <main id="main-doc">
+        <section class="main-section" id="Introduction">
+            <header>Introduction</header>
+            <p>Python is a high-level, interpreted programming language with dynamic semantics. Its high-level built-in data structures, combined with dynamic typing and dynamic binding, make it very attractive for Rapid Application Development.</p>
+            <p>Python's simple, easy-to-learn syntax emphasizes readability and therefore reduces the cost of program maintenance. Python supports modules and packages, which encourages program modularity and code reuse.</p>
+            <p>The Python interpreter and the extensive standard library are available in source or binary form without charge for all major platforms, and can be freely distributed.</p>
+            <code>print("Hello, World!")</code>
+            <ul>
+                <li>Easy to learn and use</li>
+                <li>Extensive standard library</li>
+                <li>Cross-platform compatibility</li>
+            </ul>
+        </section>
+
+        <section class="main-section" id="Getting_Started">
+            <header>Getting Started</header>
+            <p>To get started with Python, you need to install the Python interpreter on your system. Python is available for Windows, macOS, and Linux operating systems.</p>
+            <p>You can download Python from the official website at python.org. The installation process is straightforward and includes the Python interpreter, standard library, and IDLE (Integrated Development and Learning Environment).</p>
+            <p>Once installed, you can run Python programs from the command line or use an integrated development environment (IDE) like PyCharm, Visual Studio Code, or IDLE.</p>
+            <code>python --version</code>
+            <p>This command will display the installed Python version. You can also start the Python interactive interpreter by typing <code>python</code> in your terminal.</p>
+            <ul>
+                <li>Download from python.org</li>
+                <li>Install the interpreter</li>
+                <li>Choose an IDE or text editor</li>
+                <li>Run your first program</li>
+            </ul>
+        </section>
+
+        <section class="main-section" id="Variables_and_Data_Types">
+            <header>Variables and Data Types</header>
+            <p>Python is dynamically typed, which means you don't need to declare variable types explicitly. The interpreter determines the type based on the assigned value.</p>
+            <p>Python supports several built-in data types including integers, floats, strings, booleans, lists, tuples, dictionaries, and sets.</p>
+            <code>
+# Variable assignments
+name = "Alice"
+age = 25
+height = 5.6
+is_student = True
+            </code>
+            <p>Variables in Python are created when you first assign a value to them. Python uses duck typing, which means "if it looks like a duck and quacks like a duck, it's a duck."</p>
+            <ul>
+                <li>Integers (int): Whole numbers</li>
+                <li>Floats (float): Decimal numbers</li>
+                <li>Strings (str): Text data</li>
+                <li>Booleans (bool): True or False</li>
+                <li>Lists: Ordered, mutable collections</li>
+                <li>Tuples: Ordered, immutable collections</li>
+            </ul>
+        </section>
+
+        <section class="main-section" id="Control_Structures">
+            <header>Control Structures</header>
+            <p>Control structures in Python allow you to control the flow of program execution. The main control structures are conditional statements and loops.</p>
+            <p>Python uses indentation to define code blocks, which makes the code more readable and enforces good programming practices.</p>
+            <code>
+# If statement
+if age >= 18:
+    print("You are an adult")
+elif age >= 13:
+    print("You are a teenager")
+else:
+    print("You are a child")
+            </code>
+            <p>Python supports for loops and while loops for iteration. For loops are commonly used to iterate over sequences like lists, tuples, or strings.</p>
+            <code>
+# For loop
+for i in range(5):
+    print(f"Number: {i}")
+
+# While loop
+count = 0
+while count < 5:
+    print(count)
+    count += 1
+            </code>
+            <ul>
+                <li>if, elif, else statements</li>
+                <li>for loops</li>
+                <li>while loops</li>
+                <li>break and continue statements</li>
+            </ul>
+        </section>
+
+        <section class="main-section" id="Functions">
+            <header>Functions</header>
+            <p>Functions in Python are defined using the <code>def</code> keyword. They allow you to organize code into reusable blocks and follow the DRY (Don't Repeat Yourself) principle.</p>
+            <p>Functions can accept parameters and return values. Python supports default parameters, variable-length arguments, and keyword arguments.</p>
+            <code>
+def greet(name, greeting="Hello"):
+    return f"{greeting}, {name}!"
+
+# Function call
+message = greet("Alice")
+print(message)  # Output: Hello, Alice!
+            </code>
+            <p>Python functions are first-class objects, meaning they can be assigned to variables, passed as arguments to other functions, and returned from functions.</p>
+            <p>Lambda functions provide a way to create small, anonymous functions. They are useful for short operations that can be defined inline.</p>
+            <code>
+# Lambda function
+square = lambda x: x ** 2
+print(square(5))  # Output: 25
+            </code>
+            <ul>
+                <li>Function definition with def keyword</li>
+                <li>Parameters and return values</li>
+                <li>Default parameters</li>
+                <li>Variable-length arguments (*args, **kwargs)</li>
+                <li>Lambda functions</li>
+            </ul>
+        </section>
+
+        <section class="main-section" id="Object_Oriented_Programming">
+            <header>Object Oriented Programming</header>
+            <p>Python supports object-oriented programming (OOP) with classes and objects. OOP allows you to model real-world entities and create more organized and maintainable code.</p>
+            <p>A class is a blueprint for creating objects, while an object is an instance of a class. Classes can have attributes (data) and methods (functions).</p>
+            <code>
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+    
+    def introduce(self):
+        return f"Hi, I'm {self.name} and I'm {self.age} years old."
+
+# Creating an object
+person = Person("Alice", 25)
+print(person.introduce())
+            </code>
+            <p>Python supports inheritance, which allows you to create new classes based on existing ones. This promotes code reuse and creates hierarchical relationships between classes.</p>
+            <p>Encapsulation in Python is achieved through naming conventions. Attributes and methods starting with an underscore are considered private.</p>
+            <ul>
+                <li>Classes and objects</li>
+                <li>Constructors (__init__ method)</li>
+                <li>Instance and class attributes</li>
+                <li>Inheritance</li>
+                <li>Polymorphism</li>
+                <li>Encapsulation</li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>
